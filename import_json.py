@@ -7,10 +7,10 @@ import shutil
 
 # --- User-friendly drag & drop ---
 print("📁 Drag your Snapchat memories_history.json file here and press Enter:")
-JSON_FILE = input().strip().replace("\\", "")
+JSON_FILE = input().strip().strip('"')
 
 print("📂 Drag the folder where you want downloads saved and press Enter:")
-OUTPUT_DIR = input().strip().replace("\\", "")
+OUTPUT_DIR = input().strip().strip('"')
 
 os.makedirs(OUTPUT_DIR, exist_ok=True)
 existing_files = set(os.listdir(OUTPUT_DIR))
